@@ -35,7 +35,11 @@ function isNumeric(n: any) {
 }
 
 const toString = (v: Version) => {
-  v = v || {};
+  v = v || {
+    major: -1,
+    minor: -1,
+    patch: -1,
+  };
 
   return `${v.major}.${v.minor}.${v.patch}`;
 }

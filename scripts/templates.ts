@@ -1,9 +1,10 @@
 import * as shell from 'shelljs';
 
-shell.exec(`tsc -p ${__dirname}/tsconfig.json`);
+const sdkTemplatesPath = `${__dirname}/../src/sdk-templates`;
+const srcPath = `${sdkTemplatesPath}/tmp`;
+const destPath = `./dist`;
 
-const srcPath = `${__dirname}/tmp`;
-const destPath = `${__dirname}/../../../SDKTemplates/typescript`;
+shell.exec(`tsc -p ${sdkTemplatesPath}/tsconfig.json`);
 
 shell.mkdir('-p', destPath);
 
@@ -13,3 +14,4 @@ shell.mv(`${srcPath}/typescript.js`, `${destPath}/typescript.js.tpl`);
 shell.rm('-rf', srcPath);
 
 shell.exec('echo Done.')
+

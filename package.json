@@ -2,10 +2,7 @@
   "name": "betelgeuse-typescript-client",
   "version": "0.0.0",
   "description": "The typescript Client SDK",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GabrielCTroia/betelgeuse-typescript-client.git"
@@ -17,9 +14,19 @@
   },
   "homepage": "https://github.com/GabrielCTroia/betelgeuse-typescript-client#readme",
   "dependencies": {
+    "@types/bluebird": "^3.5.12",
+    "@types/shelljs": "^0.7.4",
+    "bluebird": "^3.5.0",
     "shelljs": "^0.7.8"
   },
   "devDependencies": {
     "@types/node": "^8.0.31"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "templates": "ts-node ./scripts/templates.ts",
+    "build": "tsc",
+    "release": "npm run clean && npm run templates && npm run build"
   }
 }
