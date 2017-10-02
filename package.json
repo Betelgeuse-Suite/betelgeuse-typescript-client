@@ -1,0 +1,25 @@
+{
+  "name": "betelgeuse-typescript-client",
+  "version": "0.0.0",
+  "description": "The typescript Client SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielCTroia/betelgeuse-typescript-client.git"
+  },
+  "author": "Gabriel C. Troia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GabrielCTroia/betelgeuse-typescript-client/issues"
+  },
+  "homepage": "https://github.com/GabrielCTroia/betelgeuse-typescript-client#readme",
+  "dependencies": {
+    "shelljs": "^0.7.8"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.31"
+  }
+}
