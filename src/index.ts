@@ -18,7 +18,7 @@ const readFile = (path: string) => {
 
 export const getSDKTemplates = () => {
   return Promise.all([
-    readFile('./typescript.js.tpl'),
-    readFile('./typescript.d.ts.tpl'),
+    readFile(__dirname + '/typescript.js.tpl'),
+    readFile(__dirname + '/typescript.d.ts.tpl'),
   ]);
 }
