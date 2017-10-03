@@ -19,5 +19,9 @@ exports.getSDKTemplates = function () {
     return Promise.all([
         readFile(__dirname + '/typescript.js.tpl'),
         readFile(__dirname + '/typescript.d.ts.tpl'),
-    ]);
+    ])
+        .then(function (_a) {
+        var js = _a[0], tsd = _a[1];
+        return ({ js: js, tsd: tsd });
+    });
 };

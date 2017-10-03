@@ -15,10 +15,10 @@ const readFile = (path: string) => {
     .then(s => <string>s);
 }
 
-
 export const getSDKTemplates = () => {
   return Promise.all([
     readFile(__dirname + '/typescript.js.tpl'),
     readFile(__dirname + '/typescript.d.ts.tpl'),
-  ]);
+  ])
+    .then(([js, tsd]) => ({ js, tsd }));
 }
